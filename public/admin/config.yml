@@ -4,6 +4,28 @@ backend:
 media_folder: public/img
 public_folder: img
 collections:
+  - name: "landing"
+    label: "Landing"
+    files:
+    - label: "Banner"
+      name: "banner"
+      file: "content/landing.md"
+      fields:
+        - { label: "Slogan", name: "slogan", widget: "string"}
+        - { label: "Slogan Description", name: "sloganDescription", widget: "string"}
+    - label: "Services Overview"
+      name: "servicesOverview"
+      file: "content/service-overview.md"
+      fields:
+      - label: 'Services'
+        name: 'services'
+        widget: list
+        fields:
+          - { label: "Section Header" , name: "sectionHeader", widget: "string" }
+          - { label: "Section Description" , name: "sectionDescription", widget: "string" }
+          - { label: "Title" , name: "title", widget: "string" }
+          - { label: "Description" , name: "description", widget: "string" }
+          - { label: "Read More Url" , name: "url", widget: "string" }
   - name: "pages"
     label: "Pages"
     files:
