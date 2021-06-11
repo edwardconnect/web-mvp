@@ -52,6 +52,7 @@ const Home: React.FC<any> = () => {
         method="POST"
         data-netlify="true"
       >
+        <input type="hidden" name="form-name" value="contact" />
         <p>
           <label>Name <input type="text" name="name" /></label>
         </p>
