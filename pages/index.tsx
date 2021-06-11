@@ -17,12 +17,13 @@ const Form = styled.form<any>``
 const Home: React.FC<any> = () => {
   const { services } = serviceAttri;
   console.log(serviceAttri)
+
   return (
     <PageLayout>
       <LandingBanner />
       {
         services.map((it, idx) => (
-          <OverviewCard {...it} key={idx} reverse={idx % 2 !== 0} index={idx}/>
+          <OverviewCard {...it} key={idx} reverse={idx % 2 !== 0} index={idx} />
         ))
       }
       <Head>
@@ -41,7 +42,16 @@ const Home: React.FC<any> = () => {
         </ul>
       </article> */}
 
-      <Form name="contact" netlify>
+      {/* <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+     <input type="text"  name="name">
+     <input type="email" name="email">
+     <textarea name="message"></textarea>
+</form> */}
+      <form
+        name="contact"
+        method="POST"
+        data-netlify="true"
+      >
         <p>
           <label>Name <input type="text" name="name" /></label>
         </p>
@@ -51,7 +61,7 @@ const Home: React.FC<any> = () => {
         <p>
           <button type="submit">Send</button>
         </p>
-      </Form>
+      </form>
     </PageLayout>
   )
 }
