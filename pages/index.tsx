@@ -3,7 +3,7 @@ import { Component } from 'react'
 import React from 'react';
 import Nav from '../components/layout/Navbar/Navbar'
 // import PageLayout from '../components/layout/PageLayout/PageLayout'
-import { attributes as serviceAttri } from '../content/serviceoverview.md';
+import { attributes as serviceAttri } from '../content/service-overview.md';
 import { attributes, react as HomeContent } from '../content/home.md';
 import PageLayout from "../components/layout/PageLayout/PageLayout";
 import LandingBanner from "../components/landing/LandingBanner/LandingBanner";
