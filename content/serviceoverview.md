@@ -1,6 +1,6 @@
 ---
 services:
-  - sectionHeader: SOLUTIONS
+  - sectionHeader: Solutions
     sectionDescription: We offer a range of integrated solutions.
     title: Regulatory response
     description: Move with speed and precision to hit regulatory deadlines whilst
