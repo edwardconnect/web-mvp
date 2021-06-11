@@ -3,6 +3,7 @@ import styled from 'styled-components';
 const CardWrapper = styled.div<any>`
   display: flex;
   flex-direction: ${(props) => props.reverse ? 'row-reverse' : 'row'};
+  margin-bottom: 50px;
 `;
 
 const Header = styled.div`
@@ -23,11 +24,12 @@ const HeaderContainer = styled.div`
   justify-content: center;
 `;
 
-const ContentContainer = styled.div`
+const ContentContainer = styled.div<any>`
   flex: 2 0 0;
   border: 1px solid lightgray;
   border-radius: 20px;
   padding: 30px;
+  margin-right: ${(props) => props.reverse ? '40px' : '0'};
 `
 
 const Title = styled.div`

@@ -8,20 +8,20 @@ const OverviewCard: React.FC<any> = ({
   title,
   description,
   url,
-  reverse
+  reverse,
+  index,
 }) => {
   return (
     <Styles.CardWrapper reverse={reverse}>
       <Styles.HeaderContainer>
-        <Fade delay={500} mirror={reverse} left>
+        <Fade delay={500 + index * 300} mirror={reverse} left>
           <Styles.Header>{sectionHeader}</Styles.Header>
           <Styles.HeaderDescription>{sectionDescription}</Styles.HeaderDescription>
         </Fade>
       </Styles.HeaderContainer>
       <Styles.Wrapper>
-        <Fade delay={500} mirror={reverse} right>
-          <Styles.ContentContainer>
-
+        <Fade delay={500 + index * 300} mirror={reverse} right>
+          <Styles.ContentContainer reverse={reverse}>
             <Styles.Title>{title}</Styles.Title>
             <Styles.Description>{description}</Styles.Description>
           </Styles.ContentContainer>

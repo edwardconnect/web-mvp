@@ -4,23 +4,25 @@ import React from 'react';
 import Nav from '../components/layout/Navbar/Navbar'
 // import PageLayout from '../components/layout/PageLayout/PageLayout'
 import { attributes as serviceAttri } from '../content/service-overview.md';
-import { attributes, react as HomeContent } from '../content/home.md';
+// import { attributes, react as HomeContent } from '../content/home.md';
 import PageLayout from "../components/layout/PageLayout/PageLayout";
 import LandingBanner from "../components/landing/LandingBanner/LandingBanner";
 import OverviewCard from "../components/landing/OverviewCard/OverviewCard";
 // import PageLayout from '../components/layout/PageLayout/PageLayout'
 
+import styled from 'styled-components';
+
+const Form = styled.form<any>``
+
 const Home: React.FC<any> = () => {
-  const { title, cats } = attributes;
   const { services } = serviceAttri;
   console.log(serviceAttri)
-  console.log(attributes)
   return (
     <PageLayout>
       <LandingBanner />
       {
         services.map((it, idx) => (
-          <OverviewCard {...it} key={idx} reverse={idx % 2 !== 0} />
+          <OverviewCard {...it} key={idx} reverse={idx % 2 !== 0} index={idx}/>
         ))
       }
       <Head>
@@ -39,7 +41,7 @@ const Home: React.FC<any> = () => {
         </ul>
       </article> */}
 
-      <form name="contact" netlify>
+      <Form name="contact" netlify>
         <p>
           <label>Name <input type="text" name="name" /></label>
         </p>
@@ -49,7 +51,7 @@ const Home: React.FC<any> = () => {
         <p>
           <button type="submit">Send</button>
         </p>
-      </form>
+      </Form>
     </PageLayout>
   )
 }
