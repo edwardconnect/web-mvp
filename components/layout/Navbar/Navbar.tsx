@@ -1,10 +1,20 @@
 import React from 'react';
+import Link from 'next/link';
 
 import Styles from './Navbar.style';
 
-const Navbar:React.FC = () => (
+const Navbar: React.FC = () => (
   <Styles.Nav>
-    <Styles.NavImage src="images/kinaesis-log.png"/>
+    <Link href="/">
+      <a>
+        <Styles.NavImage src="images/kinaesis-log.png" />
+      </a>
+    </Link>
+    <Styles.NavItem>
+      <Link href="/news">
+        <a>News</a>
+      </Link>
+    </Styles.NavItem>
   </Styles.Nav>
 )
 

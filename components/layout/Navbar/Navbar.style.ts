@@ -10,13 +10,23 @@ const Nav = styled.nav`
   position: sticky;
   top: 0;
   padding: 25px 0px;
+  justify-content: space-between;
 `;
 
 const NavImage = styled.img`
   max-height: 40px;
 `;
 
+const NavItem = styled.div`
+  a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+  }
+`;
+
 export default {
   Nav,
-  NavImage
+  NavImage,
+  NavItem,
 }

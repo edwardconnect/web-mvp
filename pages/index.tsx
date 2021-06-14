@@ -9,9 +9,7 @@ import PageLayout from "../components/layout/PageLayout/PageLayout";
 import LandingBanner from "../components/landing/LandingBanner/LandingBanner";
 import OverviewCard from "../components/landing/OverviewCard/OverviewCard";
 // import PageLayout from '../components/layout/PageLayout/PageLayout'
-
 import styled from 'styled-components';
-
 const Form = styled.form<any>``
 
 const Home: React.FC<any> = () => {
