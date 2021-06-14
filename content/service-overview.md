@@ -7,7 +7,7 @@ services:
       building a foundation that provides leverage to maximise returns on
       mandatory inve
     url: https://www.kinaesis.com/solution/004-regulatory-response
-  - sectionHeader: PRODUCTS
+  - sectionHeader: Products
     sectionDescription: We offer a range of products.
     title: Kinaesis Clarity Know Your Register
     description: "Unparalleled transparency to your underlying register and
